@@ -1,0 +1,29 @@
+<body>
+    <section class="wrapperCenter">
+        <div class="content" id="loginContainer">  
+                <h1>Create blog</h1>
+                <br />
+                <form id="form" (ngSubmit)="f.form.valid && createBlog()" #f="ngForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Title" id="title" name="title" [(ngModel)]="blog.title"  #title="ngModel"/>
+                </div>
+
+                <div class="form-group">
+                    <textarea rows="5" class="form-control" type="text area" required placeholder="Content" id="content" name="content"  [(ngModel)]="blog.content" #content="ngModel"></textarea>
+                </div>
+           
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Save blog</button>
+                  </div>
+                  <div class="form-group">
+                    <div
+                      class="alert alert-danger"
+                      role="alert"
+                      *ngIf="f.submitted"
+                    >                      
+                    </div>
+                  </div>
+            </form>
+        </div>
+    </section>
+</body>

@@ -1,0 +1,30 @@
+<body>
+    <section class="wrapperCenter">
+        <div class="content" id="loginContainer">  
+                <h1>Create blog</h1>
+                <br />
+                <form id="form" (ngSubmit)="f.form.valid && editBlog()" #f="ngForm">
+                <div class="form-group">
+                    <input type="hidden" class="form-control" required  id="title" name="title" [(ngModel)]="blog.id" value="{{blog.id}}"  #id="ngModel"/>
+                    <input type="text" class="form-control" required  id="title" name="title" value="{{blog.title}}" [(ngModel)]="blog.title"  #title="ngModel"/>
+                </div>
+
+                <div class="form-group">
+                    <textarea rows="5" class="form-control" type="text area" required  id="content" name="content" value="{{blog.content}}"  [(ngModel)]="blog.content" #content="ngModel"></textarea>
+                </div>
+           
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Save blog</button>
+                  </div>
+                  <div class="form-group">
+                    <div
+                      class="alert alert-danger"
+                      role="alert"
+                      *ngIf="f.submitted"
+                    >                      
+                    </div>
+                  </div>
+            </form>
+        </div>
+    </section>
+</body>

@@ -1,5 +1,20 @@
-<div class="item" *ngFor="let item in blogs">
-    <h1>{{item.title}}</h1>
-    <p>{{item.content}}</p>
-  
+<div class="container">
+  <table  class="table table-bordered table-striped">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  *ngFor="let blog of blogs">
+      <td><a href="editBlog/{{blog.id}}" >{{blog.title}}</a></td>
+      <td><span>{{blog.content}}</span></td>
+      <td><button type="button" (click)='deleteBlog(blog.id)'>Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+  <div>
+    <input type="button" onclick="location.href='createBlog';" class="btn btn-primary btn-block" value="Create new blog">
   </div>
+</div>

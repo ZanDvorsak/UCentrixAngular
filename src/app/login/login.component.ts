@@ -32,10 +32,11 @@ export class LoginComponent implements OnInit {
       
       const response = await this.loginService.login(user);      
       this.tokenStorage.saveToken(response.token);
-      this.router.navigate(['/blogs']);
-      //this.tokenStorage.saveUser(response);
-      console.log(user);
-      console.log(response);
+      this.tokenStorage.saveUser(response);
+      this.router.navigate(['/blogs'], { queryParams: { id: response.id } });
+      
+      //console.log(user);
+      //console.log(response);
 
       
       // this.isLoginFailed = false;
