@@ -1,0 +1,31 @@
+<body>
+    <section class="wrapperCenter">
+        <div class="content" id="loginContainer">  
+                <h1>Registracija</h1>
+                <br />
+                <form (ngSubmit)=" registerSuccess()" #f="ngForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Email address" id="email" name="email" [(ngModel)]="user.email"  #email="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Username" id="username" name="username" [(ngModel)]="user.username" #username="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" type="password" required placeholder="Create password" id="password" name="password" minlength="8" [(ngModel)]="user.password" #password="ngModel" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" type="password" required placeholder="Confirm password" id="checkPassword" name="checkPassword" [(ngModel)]="user.checkPassword" #checkPassword="ngModel" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Firstname" id="firstName" name="firstName" [(ngModel)]="user.firstName" #firstName="ngModel" />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Laststname" id="lastName" name="lastName" [(ngModel)]="user.lastName" #lastName="ngModel"/>
+                </div>            
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Register</button>
+                  </div>
+            </form>
+        </div>
+    </section>
+</body>

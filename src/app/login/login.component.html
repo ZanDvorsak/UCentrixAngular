@@ -1,0 +1,30 @@
+<body>
+    <section class="wrapperCenter">
+        <div class="content" id="loginContainer">  
+                <h1>Login</h1>
+                <br />
+                <form (ngSubmit)="f.form.valid && login()" #f="ngForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" required placeholder="Email address" id="email" name="email" [(ngModel)]="user.email"  #email="ngModel"/>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" type="password" required placeholder="Password" id="password" name="password"  [(ngModel)]="user.password" #password="ngModel" />
+                </div>
+           
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Login</button>
+                  </div>
+                  <div class="form-group">
+                    <div
+                      class="alert alert-danger"
+                      role="alert"
+                      *ngIf="f.submitted && isLoginFailed"
+                    >
+                      Login failed: {{ errorMessage }}
+                    </div>
+                  </div>
+            </form>
+        </div>
+    </section>
+</body>
