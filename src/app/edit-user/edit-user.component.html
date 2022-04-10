@@ -1,1 +1,55 @@
-<p>edit-user works!</p>
+<body>
+    <section class="wrapperCenter">
+        <div style="width: 80%; padding-left: 100px;" class="content" id="loginContainer">  
+                <h1>Create blog</h1>
+                <br />
+                <form id="form" (ngSubmit)="saveEditUser()" #f="ngForm">
+                <div class="form-group">
+                    <span>Job Title</span>                    
+                    <select class="form-control" id="jobTitle" name="jobTitle"  [(ngModel)]="editUser.jobTitle" #jobTitle="ngModel" >
+                        <option *ngFor="let jobTitle of data.jobTitles" [selected]="data.user.jobTitle.title === jobTitle.title ? 'selected' : ''" [value]="jobTitle.id" >{{jobTitle.title}}</option>
+                    </select>                    
+                </div>
+                <div class="form-group">
+                    <span>Name</span>
+                    <input  class="form-control" type="text" id="firstName" name="firstName" value="{{data.user.firstName}}"  [(ngModel)]="editUser.firstName" #firstName="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <span>Surname</span>
+                    <input  class="form-control" type="text" id="lastName" name="lastName" value="{{data.user.lastName}}"  [(ngModel)]="editUser.lastName" #lastName="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <span>Website</span>
+                    <input  class="form-control" type="text" id="website" name="website" value="{{data.user.website}}"  [(ngModel)]="editUser.website" #website="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <span>E-mail {{data.user.email}}</span>
+                </div>
+                <div class="form-group">
+                    <span>Phone number</span>
+                    <input  class="form-control" type="number" id="phoneNumber" name="phoneNumber" value="{{data.user.phoneNumber}}"  [(ngModel)]="editUser.phoneNumber" #phoneNumber="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <span>Age</span>
+                    <input min="18" max="100" class="form-control" type="number" id="age" name="age" value="{{data.user.age}}"  [(ngModel)]="editUser.age" #age="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <span>Gender:</span> <br> 
+                    <input type="radio" [checked]="data.user.gender == 1 ? 'checked' : ''" name="gender" value="1" [(ngModel)]="editUser.gender" #gender="ngModel"><label>Male</label><br> 
+                    <input type="radio" [checked]="data.user.gender == 2 ? 'checked' : ''" name="gender" value="2" [(ngModel)]="editUser.gender" #gender="ngModel"><label>Female</label> <br>  
+                    <input type="radio" [checked]="data.user.gender == 3 ? 'checked' : ''" name="gender" value="3" [(ngModel)]="editUser.gender" #gender="ngModel"><label>Rather not say</label>              
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" class="form-control" type="text area" id="biography" name="biography" value="{{data.user.biography}}"  [(ngModel)]="editUser.biography" #biography="ngModel">Biography</textarea>
+                </div>  
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">Save</button>
+                  </div>
+                  <div class="form-group">
+                                       
+                  
+                  </div>
+            </form>
+        </div>
+    </section>
+</body>

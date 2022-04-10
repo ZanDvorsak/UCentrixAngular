@@ -8,14 +8,14 @@ import { EditBlogComponent} from './edit-blog/edit-blog.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { OuthGuard } from './outh.guard';
 
-const routes: Routes = [ { 
-  path: '', redirectTo: 'login', pathMatch: 'full' },
+const routes: Routes = [ 
+{ path: '', redirectTo: 'login', pathMatch: 'full' },
 { path: 'login', component: LoginComponent },
 { path: 'register', component: RegisterComponent },
-{ path: 'createBlog', component: CreateBlogComponent},
-{ path: 'editBlog/:postId', component: EditBlogComponent},
-{ path: 'editUser/:userId', component: EditUserComponent},
-{ path: 'blogs', component: BlogComponent, canActivate: [OuthGuard]}];
+{ path: 'blogs', component: BlogComponent, canActivate: [OuthGuard]},
+{ path: 'createBlog', component: CreateBlogComponent, canActivate: [OuthGuard]},
+{ path: 'editUser', component: EditUserComponent, canActivate: [OuthGuard]},
+{ path: 'editBlog/:postId', component: EditBlogComponent, canActivate: [OuthGuard]}];
 
 
 @NgModule({

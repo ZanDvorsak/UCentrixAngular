@@ -24,7 +24,7 @@ export class EditBlogComponent implements OnInit {
   }  
   result: any;
 
-  getBlog(postId: string) {
+  async getBlog(postId: string) {
     this.result = this.tokenStorage.getUser();    
     let params = new HttpParams().set('userId', this.result.id).set('postId', postId);
     console.log(params);
