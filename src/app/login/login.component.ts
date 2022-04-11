@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
     password: ''
   };
   errorMessage = '';
-  isLoggedIn = false;
-  isLoginFailed = false;
+  isSuccessful = false;
+
 
   constructor(private loginService: LoginService, private router: Router, private tokenStorage: TokenStorageService) { }
 
@@ -44,7 +44,7 @@ export class LoginComponent implements OnInit {
       //
     }catch(err) {
       console.log(err);
-      this.isLoginFailed = true;
+      this.isSuccessful = false;
     }
         //this.tokenStorage.saveUser(data);
 

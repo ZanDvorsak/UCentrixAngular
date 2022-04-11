@@ -94,11 +94,16 @@ export class EditUserComponent implements OnInit {
   }
   try{
     console.log(user);
-    this.router.navigate(['/blogs']);
     const response = await this.editUserService.editUser(user);
+    window.location.reload();
   }catch(err){
     console.log(err);
   }
+}
+
+async deleteUser(id: number) {  
+  this.router.navigate(['/login']); 
+  const response = await this.editUserService.deleteUser(id);
 }
 
   ngOnInit(): void {

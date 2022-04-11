@@ -1,11 +1,11 @@
 <body>
     <section class="wrapperCenter">
         <div style="width: 80%; padding-left: 100px;" class="content" id="loginContainer">  
-                <h1>Create blog</h1>
+                <h1>Edit user</h1>
                 <br />
                 <form id="form" (ngSubmit)="saveEditUser()" #f="ngForm">
                 <div class="form-group">
-                    <span>Job Title</span>                    
+                    <span>Job Title</span> 
                     <select class="form-control" id="jobTitle" name="jobTitle"  [(ngModel)]="editUser.jobTitle" #jobTitle="ngModel" >
                         <option *ngFor="let jobTitle of data.jobTitles" [selected]="data.user.jobTitle.title === jobTitle.title ? 'selected' : ''" [value]="jobTitle.id" >{{jobTitle.title}}</option>
                     </select>                    
@@ -41,7 +41,8 @@
                 </div>
                 <div class="form-group">
                     <textarea rows="5" class="form-control" type="text area" id="biography" name="biography" value="{{data.user.biography}}"  [(ngModel)]="editUser.biography" #biography="ngModel">Biography</textarea>
-                </div>  
+                </div> 
+                <td><button class="btn btn-primary btn-block" type="button" (click)='deleteUser(data.user.id)'>Delete account</button></td> 
                 <div class="form-group">
                     <button class="btn btn-primary btn-block">Save</button>
                   </div>

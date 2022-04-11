@@ -1,0 +1,109 @@
+#loginInput{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 52px;
+    width: 343px;
+    border-radius: 0px;
+
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+#loginInputFloat{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 52px;
+    width: 343px;
+    border-radius: 0px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+}
+.container-table {
+    display: table;
+    position: absolute;
+    left:40%;
+    width: auto;
+    margin-left: -180px;
+}
+.vertical-center-row {
+    display: table-cell;
+    vertical-align: middle;
+    width: auto;
+}
+html, body, .container-table {
+    height: 100%;
+}
+.loginText{
+    left: 0%;
+    right: 29.05%;
+    top: 0%;
+    bottom: 0%;
+
+    margin-bottom: 15px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+}
+.loginButton{
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    height: 52px;
+    width: 343px;   
+    background: #DADADA;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    border-image: linear-gradient(to right, #4C35DB 2.4%, #C61BCA 49.48%, #FFB801 100%) 1;
+    margin-bottom: 15px;
+    margin-left: 180px;
+    
+}
+.loginButton:hover{
+    background: radial-gradient(139.58% 128.64% at -16.67% 92%, #4C35DB 2.4%, #C61BCA 49.48%, #FFB801 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    border-radius: 0px;
+    border: 0px;
+    
+}
+.loginButtonText{
+width: 40px;
+height: 15px;
+left: calc(50% - 40px/2 - 0.5px);
+top: calc(50% - 15px/2 + 0.5px);
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 900;
+font-size: 13px;
+line-height: 15px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.04em;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+.image{
+    padding-bottom: 50px;
+    width: 120px;
+    padding-left: 300px;
+
+}
+.alert{
+    width: 343px;
+    margin-left: 10px;
+}
+

@@ -26,10 +26,18 @@ export class Blog {
 
 
 export class BlogComponent implements OnInit {  
-  blogs = new Array<Blog>();
+  data = {
+    blogs : new Array<Blog>(),
+    username: ''
+  }
+  
 
   result: any;
   constructor(private blogService: BlogService, private route: ActivatedRoute, private tokenStorage: TokenStorageService,private http: HttpClient, private router: Router) { }
+  logout(){
+    this.router.navigate(['/login']);
+    this.tokenStorage.signOut();    
+  }
 
   getBlogs(){
     this.result = this.tokenStorage.getUser();
@@ -37,7 +45,7 @@ export class BlogComponent implements OnInit {
     this.http.get<any>(baseUrl + "/blogs", {params}).subscribe(
       response => {
         console.log(response);
-        this.blogs = response;
+        this.data = response;
       }
     );
   }

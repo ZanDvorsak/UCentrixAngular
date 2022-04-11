@@ -1,30 +1,24 @@
-<body>
-    <section class="wrapperCenter">
-        <div class="content" id="loginContainer">  
-                <h1>Login</h1>
-                <br />
-                <form (ngSubmit)="f.form.valid && login()" #f="ngForm">
-                <div class="form-group">
-                    <input type="text" class="form-control" required placeholder="Email address" id="email" name="email" [(ngModel)]="user.email"  #email="ngModel"/>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" class="form-control" type="password" required placeholder="Password" id="password" name="password"  [(ngModel)]="user.password" #password="ngModel" />
-                </div>
-           
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block">Login</button>
-                  </div>
-                  <div class="form-group">
-                    <div
-                      class="alert alert-danger"
-                      role="alert"
-                      *ngIf="f.submitted && isLoginFailed"
-                    >
-                      Login failed: {{ errorMessage }}
-                    </div>
-                  </div>
-            </form>
+<body>        
+  <div class="container container-table">  
+      <div class="row vertical-center-row">
+        <div class="image">
+          <img  src="../../assets/OZ_logo.png"/>
         </div>
-    </section>
+        
+                <span class="loginText">Login</span>
+                <div class="alert alert-danger" role="alert"  *ngIf="f.submitted && isSuccessful"> Email or password is incorect! If you dont have an account, please create one.</div>
+                <form (ngSubmit)="f.form.valid && login()" #f="ngForm">
+                  
+                    <input type="text" class="form-control" required placeholder="Email address" id="loginInput" name="email" [(ngModel)]="user.email"  #email="ngModel"/>
+                    <input type="text" class="form-control" type="password" required placeholder="Password" id="loginInput" name="password"  [(ngModel)]="user.password" #password="ngModel" />    
+                    <button class="loginButton" data-toggle="modal" data-target="#myModal"><span class="loginButtonText">Login</span></button>
+                  
+            </form>
+            <div>
+              <button class="loginButton" onclick="location.href='register';" ><span class="loginButtonText">Create account</span></button>
+            </div>
+            
+
+          </div>
+        </div>
 </body>

@@ -38,8 +38,14 @@ export class EditUserService {
       website: user.website,
       phoneNumber: user.phoneNumber,
       age : user.age,
-      gender: user.gender
+      gender: user.gender,
+      biography: user.biography
     }, httpOptions).toPromise();
+  }
+
+  async deleteUser(id:number) : Promise<any> {
+    console.log(id);
+    return this.http.delete(baseUrl + '/deleteUser/'+ id).toPromise();
   }
 
 }

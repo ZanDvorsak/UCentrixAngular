@@ -43,18 +43,6 @@ export class RegisterComponent implements OnInit {
      }catch(err) {
        console.log(err);
        this.isSuccessful = false;
-     }
-     //.subscribe(
-    //   data => {
-    //     console.log(data);    
-    //     console.log("OK")    
-    //      this.router.navigate(['/login']);;  
-    //   },
-    //   err => {
-    //     console.log(err);  
-    //     console.log("Failed")     
-    //   });      
+     }      
   }  
-
-
 }
