@@ -37,4 +37,8 @@ export class TokenStorageService {
     this.router.navigate(['/login']); 
     return false;
   }
+  logout(){
+    this.router.navigate(['/login']);
+    this.signOut();    
+  }
 }

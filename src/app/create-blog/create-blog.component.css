@@ -1,0 +1,108 @@
+.navTitle{
+    height: 28px;
+    width: 580px;
+    left: 60px;
+    top: 26px;
+    border-radius: nullpx;
+    padding-left: 60px;
+
+    font-family: Comfortaa;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.015em;
+    text-align: left;
+
+}
+.navSize{
+    height: 80px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: white;
+    box-shadow: 0px 0px 4px 0px #00000040;
+
+}
+.image{
+    height: 40px;
+    width: 40px;
+    margin-right: 65px;
+}
+.logOut{   
+    height: 30px;
+    width: 30px;
+    margin-right: 14px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+html, body, .container-table {
+    height: 100%;
+}
+.container-table {
+    display: table;
+    left:40%;
+}
+.vertical-center-row {
+    display: table-cell;
+}
+.container{
+    margin-top:20px;
+}
+h1{
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+}
+.saveButton{
+    height: 20px;
+    width: 76px;
+    left: 790px;
+    top: 575px;
+    border-radius: 3px;
+    border: 0.5px solid #404040;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    border-radius: 4px;
+    border: 0.5px solid white;
+
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;    
+    float: right;
+}
+.editTitle{
+    height: auto;
+    width: auto;
+    border-radius: nullpx;
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.editContent{
+    height: auto;
+    width: auto;
+    border-radius: nullpx;
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+

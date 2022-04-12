@@ -1,10 +1,11 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blog } from '../blog/blog.component';
 import { BlogService } from '../blog/blog.service';
 import { TokenStorageService } from '../tokenStorage/token-storage.service';
 import { CreateBlogComponent } from '../create-blog/create-blog.component';
+
 
 const baseUrl = 'http://localhost:4201';
 
@@ -13,8 +14,8 @@ const baseUrl = 'http://localhost:4201';
   templateUrl: './edit-blog.component.html',
   styleUrls: ['./edit-blog.component.css']
 })
-export class EditBlogComponent implements OnInit {
-
+export class EditBlogComponent implements OnInit, OnDestroy {
+   postId : any;
   constructor(private blogService: BlogService, private routeA: ActivatedRoute, private tokenStorage: TokenStorageService,private http: HttpClient, private router: Router) { }
 
   blog = {
@@ -24,6 +25,8 @@ export class EditBlogComponent implements OnInit {
   }  
   result: any;
 
+  logout:any;
+  
   async getBlog(postId: string) {
     this.result = this.tokenStorage.getUser();    
     let params = new HttpParams().set('userId', this.result.id).set('postId', postId);
@@ -34,6 +37,8 @@ export class EditBlogComponent implements OnInit {
       }
     );
   }
+  
+
 
   async editBlog() : Promise<void>
   {
@@ -53,10 +58,14 @@ export class EditBlogComponent implements OnInit {
 
 
 
-  ngOnInit(): void {    
-    const postId = this.routeA.params.subscribe(params => {
+  ngOnInit(): void { 
+    this.logout = this.tokenStorage;
+    this.postId = this.routeA.params.subscribe(params => {
       this.getBlog(params['postId'])
     });
+  }
+  ngOnDestroy(): void {
+    this.postId.unsubscribe();
   }
 
 }

@@ -45,7 +45,8 @@ export class EditUserComponent implements OnInit {
     phoneNumber: '',
     age : 0,
     gender: 0,
-    biography: ''
+    biography: '',    
+    username : ''
   }
  data = {
    user : this.user,
@@ -66,6 +67,7 @@ export class EditUserComponent implements OnInit {
   biography: ''
 }
   result: any;
+  logout:any;
 
   async getUserForEdit()
   {
@@ -107,6 +109,7 @@ async deleteUser(id: number) {
 }
 
   ngOnInit(): void {
+    this.logout = this.tokenStorage;
     this.getUserForEdit();
   }
 

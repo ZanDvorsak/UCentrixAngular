@@ -25,10 +25,6 @@ export class BlogService {
 
   result: any;
 
-  // getBlogs(id: number) {
-  //   let params = new HttpParams().set('id', id);
-  //   return this.http.get(baseUrl + '/blogs', {params} ).toPromise();
-  // }
   async createBlog(blog: CreateBlog) : Promise<any> {
     this.result = this.tokenStorage.getUser();
     return this.http.post(baseUrl + '/createBlog', {

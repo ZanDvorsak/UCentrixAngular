@@ -1,0 +1,172 @@
+.navTitle{
+    height: 28px;
+    width: 580px;
+    left: 60px;
+    top: 26px;
+    border-radius: nullpx;
+    padding-left: 60px;
+
+    font-family: Comfortaa;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.015em;
+    text-align: left;
+
+}
+.navSize{
+    height: 80px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    background: white;
+    box-shadow: 0px 0px 4px 0px #00000040;
+
+}
+.image{
+    height: 40px;
+    width: 40px;
+    margin-right: 65px;
+}
+.logOut{   
+    height: 30px;
+    width: 30px;
+    margin-right: 14px;
+    margin-top: -20px;
+    cursor: pointer;
+}
+.container{
+    margin-top:20px;
+}
+.profile{
+    width: auto;;
+}
+.profileName{
+    margin-left:30px;
+}
+.profileName h1{
+    font-family: Comfortaa;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.editButton{
+    height: 30px;
+    width: 80px;  
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    border: 0.5px solid #404040;
+
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.editSelect{
+    height: 30px;
+    width:  100px;
+    left: 293px;
+    top: 277px;
+    border-radius: 3px;
+    border: 0.5px solid #dbdada;
+    margin-left: 20px;
+    margin-top: 0px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 9px;
+   
+
+}
+.inputs{
+    margin-bottom: 10px  !important;
+}
+label{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 14px;
+    letter-spacing: 0em;
+    display: inline-block !important;    
+    width: 120px;
+}
+b{
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 10px;
+    margin-left: 20px;
+
+}
+.editInput{
+    height: 30px;
+    width:  300px !important;
+    margin-left: 20px;
+}
+.labelDiv{
+  
+    text-align: right;
+}
+.inputRadio{
+    margin-left: 20px !important;    
+}
+textarea{
+    margin-left: 20px;
+    width: 300px !important;
+}
+.saveButton{
+    height: 25px;
+    width: 76px;
+    left: 790px;
+    top: 575px;
+    border-radius: 3px;
+    border: 0.5px solid #404040;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    border-radius: 4px;
+    border: 0.5px solid white;
+
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center; 
+    
+}
+.deleteButton{
+    height: 25px;
+    width: 100px;
+    left: 790px;
+    top: 575px;
+    border-radius: 3px;
+    border: 0.5px solid #404040;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px 0px #00000040;
+    border-radius: 4px;
+    border: 0.5px solid white;
+
+    font-family: Roboto;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center; 
+    margin-left: 50px;
+}
+.buttons{
+    margin-top: 50px;
+    margin-left: 140px;
+}

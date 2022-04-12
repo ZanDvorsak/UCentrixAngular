@@ -2,7 +2,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <span class="navbar-brand navTitle">U-centrix Web Test appliication</span>
     </div>
-    <div><img class="image" src="../../assets/OZ_logo.png"/><img class="logOut" (click)="logout()" src="../../assets/log_out_small.png"/></div>    
+    <div><img class="image" src="../../assets/OZ_logo.png"/><img class="logOut" (click)="logout.logout()" src="../../assets/log_out_small.png"/></div>    
 </nav>
 <body>
   <div class="container ">
@@ -12,7 +12,7 @@
       </div>
       <div class="col-9 profileName">
         <h1 class="">{{data.username}}</h1>
-        <span><b>0</b> blog post <b>0</b> follower <b>0</b> following</span>
+        <span><b>{{data.blogCount}}</b> blog post <b>0</b> follower <b>0</b> following</span>
       </div>
       <div class="col-1">
         <button class="editButton" onclick="location.href='editUser';">Edit profile</button>

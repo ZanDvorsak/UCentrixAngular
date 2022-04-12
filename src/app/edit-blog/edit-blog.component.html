@@ -1,30 +1,37 @@
+<nav class="navbar navbar-expand-lg navSize">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <span class="navbar-brand navTitle">U-centrix Web Test appliication</span>
+    </div>
+    <div><img class="image" src="../../assets/OZ_logo.png"/><img class="logOut" (click)="logout.logout()" src="../../assets/log_out_small.png"/></div>    
+</nav>
 <body>
-    <section class="wrapperCenter">
-        <div class="content" id="loginContainer">  
-                <h1>Create blog</h1>
-                <br />
-                <form id="form" (ngSubmit)="f.form.valid && editBlog()" #f="ngForm">
-                <div class="form-group">
-                    <input type="hidden" class="form-control" required  id="title" name="title" [(ngModel)]="blog.id" value="{{blog.id}}"  #id="ngModel"/>
-                    <input type="text" class="form-control" required  id="title" name="title" value="{{blog.title}}" [(ngModel)]="blog.title"  #title="ngModel"/>
-                </div>
-
-                <div class="form-group">
-                    <textarea rows="5" class="form-control" type="text area" required  id="content" name="content" value="{{blog.content}}"  [(ngModel)]="blog.content" #content="ngModel"></textarea>
-                </div>
-           
-                <div class="form-group">
-                    <button class="btn btn-primary btn-block">Save blog</button>
-                  </div>
-                  <div class="form-group">
-                    <div
-                      class="alert alert-danger"
-                      role="alert"
-                      *ngIf="f.submitted"
-                    >                      
-                    </div>
-                  </div>
-            </form>
+  <div class="container container-table">  
+    <div class="row vertical-center-row"> 
+        <h1>Change your blog below.</h1>
+        <br />
+        <form id="form" (ngSubmit)="f.form.valid && editBlog()" #f="ngForm">
+        <div class="editTitle" >
+            <input type="hidden" class="form-control" required  id="title" name="title" [(ngModel)]="blog.id" value="{{blog.id}}"  #id="ngModel"/>
+            <input type="text" class="form-control" required  id="title" name="title" value="{{blog.title}}" [(ngModel)]="blog.title"  #title="ngModel"/>
         </div>
-    </section>
+
+        <div class="editContent" >
+            <textarea rows="5" class="form-control" type="text area" required  id="content" name="content" value="{{blog.content}}"  [(ngModel)]="blog.content" #content="ngModel"></textarea>
+        </div>
+    
+        <div>
+            <button class="saveButton">Save blog</button>
+          </div>
+          <div class="form-group">
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="f.submitted"
+            >                      
+            </div>
+          </div>
+    </form>
+</div>
+  </div>
+    
 </body>

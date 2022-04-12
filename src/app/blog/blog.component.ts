@@ -28,35 +28,32 @@ export class Blog {
 export class BlogComponent implements OnInit {  
   data = {
     blogs : new Array<Blog>(),
-    username: ''
+    username: '',
+    blogCount: 0
   }
+
+  logout: any;
   
 
   result: any;
   constructor(private blogService: BlogService, private route: ActivatedRoute, private tokenStorage: TokenStorageService,private http: HttpClient, private router: Router) { }
-  logout(){
-    this.router.navigate(['/login']);
-    this.tokenStorage.signOut();    
-  }
 
-  getBlogs(){
+
+  async getBlogs(){
     this.result = this.tokenStorage.getUser();
     let params = new HttpParams().set('id', this.result.id);
+    
     this.http.get<any>(baseUrl + "/blogs", {params}).subscribe(
       response => {
-        console.log(response);
         this.data = response;
       }
     );
   }
 
-  ngOnInit(): void {
-    console.log(this.getBlogs());
-    // this.route.params.subscribe(params => {
-    //   this.result = this.tokenStorage.getUser();
-    //   console.log(this.result.id);
-    //   this.blogService.getBlogs(this.result.id);
-    // });
+  async ngOnInit(): Promise<void> {
+    this.logout = this.tokenStorage;
+    await this.getBlogs();
+
   }
 
   async deleteBlog(id: number) {   
